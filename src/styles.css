@@ -8,6 +8,11 @@ hr{
   border-color: white;
 }
 
+
+.top-30{
+  margin-top: 30px;
+}
+
 .jumbotron{
   background-color: #171717;
 }
@@ -19,7 +24,7 @@ hr{
 .carousel-item{
   width: 100%;
   height: 500px;
-  -webkit-background-size: cover;
+  -webkit-background-size: cover; /*Evita que se distorcione la imagen*/
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
