@@ -7,6 +7,7 @@ export class SpotityService {
 
   artistas: any[] = [];
   urlBusqueda = 'https://api.spotify.com/v1/search';
+  urlArtista = 'https://api.spotify.com/v1/artists';
 
   constructor(private http: Http) { }
 
@@ -26,4 +27,22 @@ export class SpotityService {
         // return res.json().artists.items;
       });
   }
+
+  getArtista(id: string) {
+
+    let headers = new Headers();
+    headers.append('authorization', 'Bearer BQBCnCB8pvNA-NH3roWF3HC0K-Z-ma_ScljqcDX4w7jCXOGIJSn_X2vY7I0Y09yDEQsf_7APtBRk41i3Wf0p4g');
+
+
+    let query = `/${ id }`;
+    let url = this.urlArtista + query;
+
+    return this.http.get(url, {headers})
+      .map(res => {
+        console.log(res.json());
+        return res.json();
+        // return res.json().artists.items;
+      });
+  }
+
 }
