@@ -13,7 +13,7 @@ export class SpotityService {
   getArtistas(termino: string) {
 
     let headers = new Headers();
-    headers.append('authorization', 'Bearer BQDYam8E8ds_aaf9brYwtI2RdStbFfPN1Vden1idVlQK-ILK4Mg88xp--Uxsi8qA3-iNgAbqjIzUc-Vq2OvNLg');
+    headers.append('authorization', 'Bearer BQBCnCB8pvNA-NH3roWF3HC0K-Z-ma_ScljqcDX4w7jCXOGIJSn_X2vY7I0Y09yDEQsf_7APtBRk41i3Wf0p4g');
 
 
     let query = `?q=${ termino }&type=artist`;
@@ -23,7 +23,7 @@ export class SpotityService {
       .map(res => {
         this.artistas = res.json().artists.items;
         console.log(this.artistas);
-        return res.json().artists.items;
+        // return res.json().artists.items;
       });
   }
 }
